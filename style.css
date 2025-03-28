@@ -1,0 +1,255 @@
+/* Resetování stylů */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Nastavení pozadí celé stránky */
+body {
+  background-image: url("pozadi.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+}
+
+/* Záhlaví */
+header {
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+  background: transparent;
+}
+.hero-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: left;
+}
+
+.quote {
+  color: #ccccff;
+}
+
+.logo {
+  height: 80px;
+  margin-left: 50px;
+}
+
+nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end; /* Posune navigaci doprava */
+  padding-right: 70px; /* Upravit podle potřeby */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none; /* Odstraní podtržení */
+  color: #7f00ff; /* Tmavě fialová barva */
+  font-size: 35px;
+}
+
+/* Hero sekce */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 700px; /* Zvýší minimální výšku sekce */
+  background: black;
+  padding: 100px 150px; /* Zachováme širší padding */
+  width: 96.5%;
+  margin: 50px auto;
+  max-width: 1725px;
+  border-radius: 10px;
+}
+
+.hero-left {
+  width: 50%;
+  min-height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-right img {
+  max-width: none; /* Zruší omezení šířky */
+  height: 600px; /* Zvětší logo – můžeš upravit číslo */
+  width: auto; /* Zachová poměr stran */
+}
+
+/* Sekce */
+.section {
+  background: black;
+  padding: 100px 100px;
+  margin: 50px auto;
+  max-width: none;
+  width: 90%;
+  text-align: left;
+  min-height: 700px; /* Nastaví minimální výšku pro všechny sekce */
+}
+
+.section.about,
+.section.portfolio-mobile {
+  height: 750px !important; /* Stejná výška jako "Portfolio - Návrh webu" */
+  padding: 100px;
+}
+
+.about-text {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 22px;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 10px;
+  width: calc(80% - 50px);
+  max-width: 800px;
+  line-height: 1.6;
+}
+#o-mne .about-content {
+  display: flex; /* Flexbox pro zarovnání textu a obrázku */
+  align-items: center; /* Vertikální zarovnání textu a obrázku */
+  justify-content: flex-start; /* Text a obrázek budou vedle sebe, vlevo */
+}
+
+.about-text {
+  flex: 1; /* Text zabírá co nejvíce prostoru */
+  padding-right: 20px; /* Mezera mezi textem a obrázkem */
+}
+
+.about-image {
+  flex: 0 0 auto; /* Obrázek nebude flexibilní, ale bude mít pevnou velikost */
+  width: 200px; /* Nastavíme šířku obrázku */
+}
+
+.about-image img {
+  width: 100%; /* Obrázek se přizpůsobí šířce svého kontejneru */
+  height: auto; /* Zachová poměr stran */
+  border-radius: 5px; /* Zaoblení rohů obrázku (volitelné) */
+}
+
+/* Nadpisy v sekcích */
+.section h2 {
+  font-size: 35px;
+  margin-left: 20px !important;
+  text-align: left;
+  color: #7f00ff; /* Hlavní barva nadpisu */
+}
+
+/* Zvýrazněná část nadpisu */
+.section h2 span {
+  color: #ccccff; /* Světlejší fialová */
+}
+.section:nth-of-type(n + 3) h2 {
+  color: #ccccff; /* Hlavní barva u Portfolio sekcí */
+}
+
+.section:nth-of-type(n + 3) h2 span {
+  color: #7f00ff; /* Zvýrazněná část u Portfolio sekcí */
+}
+
+/* Čára pod nadpisem */
+hr {
+  width: 98% !important;
+  max-width: 1800px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: block !important;
+  border: 2px solid #ccccff !important;
+}
+
+/* Texty */
+p {
+  font-size: 22px;
+}
+
+/* Sloupce pro dovednosti */
+.skills {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+  margin-top: 30px;
+  padding-left: 20px;
+}
+
+.column {
+  text-align: left;
+  margin-left: 0;
+}
+
+.column h3 {
+  color: #ccccff;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.column p {
+  font-size: 22px;
+}
+
+/* Portfolio obrázky */
+.portfolio-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.portfolio-grid img {
+  height: 400px;
+  width: auto;
+}
+
+/* Plná šířka */
+.full-width {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Kontakt */
+footer {
+  background-color: black !important;
+  color: #ccccff;
+  padding: 50px;
+  text-align: left;
+  width: 96.5%;
+  margin: 50px auto;
+  max-width: 1725px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Nadpis "Kontakt" */
+footer h2 {
+  color: #7f00ff;
+  font-size: 35px;
+  margin-bottom: 10px;
+  margin-left: 0px !important;
+}
+
+/* Nastavení barvy pro běžný text ve footeru */
+footer p {
+  color: #ccccff;
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.email {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
