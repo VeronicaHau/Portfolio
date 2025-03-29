@@ -1,4 +1,4 @@
-/* Resetování stylů */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* Nastavení pozadí celé stránky */
+
 body {
   background-image: url("pozadi.jpeg");
   background-size: cover;
@@ -15,7 +15,7 @@ body {
   color: white;
 }
 
-/* Záhlaví */
+
 header {
   display: flex;
   align-items: center;
@@ -42,8 +42,8 @@ header {
 nav {
   flex-grow: 1;
   display: flex;
-  justify-content: flex-end; /* Posune navigaci doprava */
-  padding-right: 70px; /* Upravit podle potřeby */
+  justify-content: flex-end; 
+  padding-right: 70px; 
 }
 
 nav ul {
@@ -53,19 +53,19 @@ nav ul {
 }
 
 nav ul li a {
-  text-decoration: none; /* Odstraní podtržení */
-  color: #7f00ff; /* Tmavě fialová barva */
+  text-decoration: none; 
+  color: #7f00ff; 
   font-size: 35px;
 }
 
-/* Hero sekce */
+
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 700px; /* Zvýší minimální výšku sekce */
+  min-height: 700px; 
   background: black;
-  padding: 100px 150px; /* Zachováme širší padding */
+  padding: 100px 150px; 
   width: 96.5%;
   margin: 50px auto;
   max-width: 1725px;
@@ -79,12 +79,12 @@ nav ul li a {
 }
 
 .hero-right img {
-  max-width: none; /* Zruší omezení šířky */
-  height: 600px; /* Zvětší logo – můžeš upravit číslo */
-  width: auto; /* Zachová poměr stran */
+  max-width: none; 
+  height: 600px; 
+  width: auto; 
 }
 
-/* Sekce */
+
 .section {
   background: black;
   padding: 100px 100px;
@@ -92,12 +92,12 @@ nav ul li a {
   max-width: none;
   width: 90%;
   text-align: left;
-  min-height: 700px; /* Nastaví minimální výšku pro všechny sekce */
+  min-height: 700px; 
 }
 
 .section.about,
 .section.portfolio-mobile {
-  height: 750px !important; /* Stejná výška jako "Portfolio - Návrh webu" */
+  height: 750px !important; 
   padding: 100px;
 }
 
@@ -113,48 +113,48 @@ nav ul li a {
   line-height: 1.6;
 }
 #o-mne .about-content {
-  display: flex; /* Flexbox pro zarovnání textu a obrázku */
-  align-items: center; /* Vertikální zarovnání textu a obrázku */
-  justify-content: flex-start; /* Text a obrázek budou vedle sebe, vlevo */
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
 }
 
 .about-text {
-  flex: 1; /* Text zabírá co nejvíce prostoru */
-  padding-right: 20px; /* Mezera mezi textem a obrázkem */
+  flex: 1; 
+  padding-right: 20px; 
 }
 
 .about-image {
-  flex: 0 0 auto; /* Obrázek nebude flexibilní, ale bude mít pevnou velikost */
-  width: 200px; /* Nastavíme šířku obrázku */
+  flex: 0 0 auto; 
+  width: 200px; 
 }
 
 .about-image img {
-  width: 100%; /* Obrázek se přizpůsobí šířce svého kontejneru */
-  height: auto; /* Zachová poměr stran */
-  border-radius: 5px; /* Zaoblení rohů obrázku (volitelné) */
+  width: 100%; 
+  height: auto; 
+  border-radius: 5px; 
 }
 
-/* Nadpisy v sekcích */
+
 .section h2 {
   font-size: 35px;
   margin-left: 20px !important;
   text-align: left;
-  color: #7f00ff; /* Hlavní barva nadpisu */
+  color: #7f00ff; 
 }
 
-/* Zvýrazněná část nadpisu */
+
 .section h2 span {
-  color: #ccccff; /* Světlejší fialová */
+  color: #ccccff; 
 }
 .section:nth-of-type(n + 3) h2 {
-  color: #ccccff; /* Hlavní barva u Portfolio sekcí */
+  color: #ccccff; 
 }
 
 .section:nth-of-type(n + 3) h2 span {
-  color: #7f00ff; /* Zvýrazněná část u Portfolio sekcí */
+  color: #7f00ff; 
 }
 
-/* Čára pod nadpisem */
+
 hr {
   width: 98% !important;
   max-width: 1800px !important;
@@ -164,12 +164,12 @@ hr {
   border: 2px solid #ccccff !important;
 }
 
-/* Texty */
+
 p {
   font-size: 22px;
 }
 
-/* Sloupce pro dovednosti */
+
 .skills {
   display: flex;
   justify-content: flex-start;
@@ -193,7 +193,7 @@ p {
   font-size: 22px;
 }
 
-/* Portfolio obrázky */
+
 .portfolio-grid {
   display: flex;
   justify-content: center;
@@ -206,7 +206,7 @@ p {
   width: auto;
 }
 
-/* Plná šířka */
+
 .full-width {
   width: 100%;
   max-width: 900px;
@@ -214,7 +214,7 @@ p {
   display: block;
 }
 
-/* Kontakt */
+
 footer {
   background-color: black !important;
   color: #ccccff;
@@ -229,7 +229,7 @@ footer {
   align-items: flex-start;
 }
 
-/* Nadpis "Kontakt" */
+
 footer h2 {
   color: #7f00ff;
   font-size: 35px;
@@ -237,7 +237,7 @@ footer h2 {
   margin-left: 0px !important;
 }
 
-/* Nastavení barvy pro běžný text ve footeru */
+
 footer p {
   color: #ccccff;
   font-size: 21px;
