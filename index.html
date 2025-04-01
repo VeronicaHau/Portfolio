@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <meta
+      name="description"
+      content="Portfolio junior UX/UI designérky, kde se minimalistická filozofie snoubí s funkčností. Inspirujte se moderními návrhy mobilních aplikací, webových stránek a projektu Bentobox."
+    />
   </head>
   <body>
-    
     <header>
-      <img src="logo.png" alt="Logo" class="logo" />
+      <a href="#"><img src="logo.png" alt="Logo" class="logo" /></a>
       <nav>
         <ul>
           <li><a href="#o-mne">O mně</a></li>
@@ -19,12 +22,11 @@
       </nav>
     </header>
 
-  
     <section class="hero">
       <div class="hero-left">
         <p class="quote">
-          "Minimalismus není jen estetika - je to filozofie, která umožňuje
-          soustředit se na to podstatné a odstranit vše nadbytečné."
+          „Minimalismus není jen estetika <br />— je to filozofie, která
+          umožňuje soustředit se na to podstatné a odstranit vše nadbytečné.“
         </p>
       </div>
       <div class="hero-right">
@@ -32,70 +34,114 @@
       </div>
     </section>
 
-   
     <section id="o-mne" class="section">
-      <h2>O mně</h2>
-      <hr />
-      <div class="about-text">
-        <p class="about-text">
-          Jsem junior UX/UI designérka. <br />
-          Mým cílem je vytvářet designy, které jsou nejen vizuálně atraktivní,
-          ale především funkční a intuitivní.<br />
-          Pokud hledáte moderní a minimalistický design, <br />
-          který vyjadřuje vaši značku a přitom nezahltí uživatele, <br />
-          jste na správném místě.
-        </p>
+      <div class="about-header">
+        <h2>O mně</h2>
+        <hr />
       </div>
-      <div class="about-image">
-        <img src="selfie.JPG" alt="Obrázek o mně" />
-      </div>
-      <div class="skills">
-        <div class="column">
-          <h3>UX/UI design</h3>
-          <p>HTML & CSS</p>
-          <p>Moodboard</p>
-          <p>Wireframe & Prototype</p>
+
+      <div class="about-columns">
+        <div class="about-left">
+          <div class="about-text">
+            <p>Jsem junior UX/UI designérka.</p>
+            <p>
+              Mým cílem je vytvářet designy, které jsou nejen vizuálně
+              atraktivní, ale především funkční a intuitivní.
+            </p>
+            <p>
+              Pokud hledáte moderní a minimalistický design, který vyjadřuje
+              vaši značku a přitom nezahltí uživatele, jste na správném místě.
+            </p>
+          </div>
+          <div class="skills">
+            <div class="column">
+              <h3>UX/UI design</h3>
+              <ul>
+                <li>HTML & CSS</li>
+                <li>Moodboard</li>
+                <li>Wireframe & Prototype</li>
+              </ul>
+            </div>
+            <div class="column">
+              <h3>Programy</h3>
+              <ul>
+                <li>Visual Studio Code</li>
+                <li>Figma</li>
+                <li>Adobe Photoshop & Illustrator</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="column">
-          <h3>Programy</h3>
-          <p>Visual Studio Code</p>
-          <p>Figma</p>
-          <p>Adobe Photoshop & Illustrator</p>
+        <div class="about-right">
+          <div class="about-image">
+            <picture>
+              <source srcset="selfie.avif" type="image/avif" />
+              <source srcset="selfie.webp" type="image/webp" />
+              <img src="selfie.jpg" alt="Obrázek o mně" />
+            </picture>
+          </div>
         </div>
       </div>
     </section>
 
-    
     <section id="portfolio" class="section">
-      <h2><span>Portfolio -</span> Mobilní aplikace</h2>
+      <h2><span>Portfolio —</span> Mobilní aplikace</h2>
       <hr />
       <div class="portfolio-grid">
-        <img src="MA 1.png" alt="MA1" />
-        <img src="MA 2.png" alt="MA2" />
-        <img src="MA 3.png" alt="MA3" />
-        <img src="MA 4.png" alt="MA4" />
+        <picture>
+          <source srcset="MA 1.avif" type="image/avif" />
+          <source srcset="MA 1.webp" type="image/webp" />
+          <img src="MA 1.jpg" alt="MA1" />
+        </picture>
+
+        <picture>
+          <source srcset="MA 2.avif" type="image/avif" />
+          <source srcset="MA 2.webp" type="image/webp" />
+          <img src="MA 2.jpg" alt="MA2" />
+        </picture>
+
+        <picture>
+          <source srcset="MA 3.avif" type="image/avif" />
+          <source srcset="MA 3.webp" type="image/webp" />
+          <img src="MA 3.jpg" alt="MA3" />
+        </picture>
+
+        <picture>
+          <source srcset="MA 4.avif" type="image/avif" />
+          <source srcset="MA 4.webp" type="image/webp" />
+          <img src="MA 4.jpg" alt="MA4" />
+        </picture>
       </div>
     </section>
 
-    
     <section class="section">
-      <h2><span>Portfolio -</span> Návrh webu</h2>
+      <h2><span>Portfolio —</span> Návrh webu</h2>
       <hr />
-      <img src="NW 1.png" alt="Návrh webu" class="full-width" />
+      <picture>
+        <source srcset="NW 1.avif" type="image/avif" />
+        <source srcset="NW 1.webp" type="image/webp" />
+        <img src="NW 1.jpg" alt="Návrh webu" class="full-width mt-picture" />
+      </picture>
     </section>
 
-   
     <section class="section">
-      <h2><span>Portfolio -</span> Bentobox</h2>
+      <h2><span>Portfolio —</span> Bentobox</h2>
       <hr />
-      <img src="BB.png" alt="Bentobox" class="full-width" />
+      <picture>
+        <source srcset="BB.avif" type="image/avif" />
+        <source srcset="BB.webp" type="image/webp" />
+        <img src="BB.jpg" alt="Bentobox" class="full-width mt-picture" />
+      </picture>
     </section>
 
-   
     <footer id="kontakt">
       <h2>Kontakt</h2>
       <p>Zaujala vás moje práce? Ozvěte se!</p>
-      <p class="email">veronicahauerova@gmail.com</p>
+      <p>
+        <a href="mailto:veronicahauerova@gmail.com" class="email"
+          >veronicahauerova<wbr />@gmail.com</a
+        >
+      </p>
     </footer>
   </body>
 </html>
