@@ -6,7 +6,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* nedoporučuji používat hvězdičky, zbytečně zpomalují stránku */
+/* nedoporuÄuji pouĹžĂ­vat hvÄzdiÄky, zbyteÄnÄ zpomalujĂ­ strĂĄnku */
 
 * {
   margin: 0;
@@ -17,7 +17,7 @@ html {
 
 body {
   background-image: url("pozadi.jpg");
-  /* vybere typ pozadí podle toho, co umí prohlížeč */
+  /* vybere typ pozadĂ­ podle toho, co umĂ­ prohlĂ­ĹžeÄ */
   background-image: image-set(
     url("pozadi.avif") type("image/avif"),
     url("pozadi.webp") type("image/webp"),
@@ -133,7 +133,7 @@ nav ul li a {
   flex: 1;
   padding-right: 20px;
 
-  /* max width podle počtu znaků je lepší varianta */
+  /* max width podle poÄtu znakĹŻ je lepĹĄĂ­ varianta */
   max-width: 40ex;
 }
 
