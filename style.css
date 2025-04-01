@@ -1,3 +1,12 @@
+:root {
+  --max-section-size: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* nedoporučuji používat hvězdičky, zbytečně zpomalují stránku */
 
 * {
   margin: 0;
@@ -6,28 +15,26 @@
   font-family: "Roboto", sans-serif;
 }
 
-
 body {
-  background-image: url("pozadi.jpeg");
+  background-image: url("pozadi.jpg");
+  /* vybere typ pozadí podle toho, co umí prohlížeč */
+  background-image: image-set(
+    url("pozadi.avif") type("image/avif"),
+    url("pozadi.webp") type("image/webp"),
+    url("pozadi.jpg") type("image/jpeg")
+  );
+
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   color: white;
 }
 
-
 header {
   display: flex;
   align-items: center;
   padding: 20px 50px;
   background: transparent;
-}
-.hero-left {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  text-align: left;
 }
 
 .quote {
@@ -42,48 +49,57 @@ header {
 nav {
   flex-grow: 1;
   display: flex;
-  justify-content: flex-end; 
-  padding-right: 70px; 
+  justify-content: flex-end;
+  padding-right: 70px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: calc(1.5 * 25px);
 }
 
 nav ul li a {
-  text-decoration: none; 
-  color: #7f00ff; 
+  text-decoration: none;
+  color: #7f00ff;
   font-size: 35px;
 }
-
 
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 700px; 
+  min-height: 700px;
   background: black;
-  padding: 100px 150px; 
+  padding: 100px 150px;
   width: 96.5%;
   margin: 50px auto;
-  max-width: 1725px;
+  /* max-width: 1725px; */
   border-radius: 10px;
+
+  max-width: var(--max-section-size);
 }
 
 .hero-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+  text-align: left;
+
   width: 50%;
   min-height: 300px;
-  background: rgba(255, 255, 255, 0.1);
+}
+
+.hero-left .quote {
+  max-width: 30ch;
 }
 
 .hero-right img {
-  max-width: none; 
-  height: 600px; 
-  width: auto; 
+  max-width: none;
+  height: 400px;
+  width: auto;
 }
-
 
 .section {
   background: black;
@@ -92,12 +108,14 @@ nav ul li a {
   max-width: none;
   width: 90%;
   text-align: left;
-  min-height: 700px; 
+  min-height: 700px;
+  border-radius: 10px;
+  max-width: var(--max-section-size);
 }
 
 .section.about,
 .section.portfolio-mobile {
-  height: 750px !important; 
+  height: 750px !important;
   padding: 100px;
 }
 
@@ -108,52 +126,65 @@ nav ul li a {
   text-align: left;
   margin-top: 20px;
   margin-left: 10px;
-  width: calc(80% - 50px);
-  max-width: 800px;
+  /* width: calc(80% - 50px);
+  max-width: 800px; */
   line-height: 1.6;
-}
-#o-mne .about-content {
-  display: flex; 
-  align-items: center; 
-  justify-content: flex-start; 
+
+  flex: 1;
+  padding-right: 20px;
+
+  /* max width podle počtu znaků je lepší varianta */
+  max-width: 40ex;
 }
 
-.about-text {
-  flex: 1; 
-  padding-right: 20px; 
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+#o-mne .about-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .about-image {
-  flex: 0 0 auto; 
-  width: 200px; 
+  flex: 0 0 auto;
+  max-width: 400px;
 }
 
 .about-image img {
-  width: 100%; 
-  height: auto; 
-  border-radius: 5px; 
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
+.about-columns {
+  display: flex;
+  gap: 40px;
+}
+
+.about-header {
+  margin-bottom: 40px;
+}
 
 .section h2 {
   font-size: 35px;
   margin-left: 20px !important;
   text-align: left;
-  color: #7f00ff; 
+  color: #7f00ff;
+  margin-bottom: 10px;
 }
-
 
 .section h2 span {
-  color: #ccccff; 
+  color: #ccccff;
 }
 .section:nth-of-type(n + 3) h2 {
-  color: #ccccff; 
+  color: #ccccff;
 }
 
 .section:nth-of-type(n + 3) h2 span {
-  color: #7f00ff; 
+  color: #7f00ff;
 }
-
 
 hr {
   width: 98% !important;
@@ -164,17 +195,15 @@ hr {
   border: 2px solid #ccccff !important;
 }
 
-
 p {
   font-size: 22px;
 }
-
 
 .skills {
   display: flex;
   justify-content: flex-start;
   gap: 50px;
-  margin-top: 30px;
+  margin-top: 50px;
   padding-left: 20px;
 }
 
@@ -186,26 +215,29 @@ p {
 .column h3 {
   color: #ccccff;
   font-size: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.column p {
+.column ul {
+  list-style-type: none;
+}
+
+.column li {
   font-size: 22px;
+  margin-bottom: 0.5rem;
 }
-
 
 .portfolio-grid {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .portfolio-grid img {
   height: 400px;
   width: auto;
 }
-
 
 .full-width {
   width: 100%;
@@ -214,6 +246,9 @@ p {
   display: block;
 }
 
+.mt-picture {
+  margin-top: 30px;
+}
 
 footer {
   background-color: black !important;
@@ -227,8 +262,9 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
 
+  max-width: var(--max-section-size);
+}
 
 footer h2 {
   color: #7f00ff;
@@ -236,7 +272,6 @@ footer h2 {
   margin-bottom: 10px;
   margin-left: 0px !important;
 }
-
 
 footer p {
   color: #ccccff;
